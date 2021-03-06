@@ -6,7 +6,7 @@ After=network.target network-online.target nss-lookup.target mysql.service maria
 [Service]
 Type=simple
 StandardError=journal
-ExecStart=/usr/local/bin/trojan web
+ExecStart=/usr/local/bin/trojan web -p 81
 ExecReload=/bin/kill -HUP \$MAINPID
 Restart=on-failure
 RestartSec=3s
